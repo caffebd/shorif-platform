@@ -7,9 +7,7 @@ var gravity = 900
 
 var direction := Vector2.ZERO
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+# Called when the node enters the scene tree for the first time
 
 func _input(event):
 	
@@ -17,10 +15,12 @@ func _input(event):
 	
 	if Input.is_action_pressed("right"):
 		direction.x += speed
+		$PlayerAnim.flip_h = false
+
 
 	if Input.is_action_pressed("left"):
 		direction.x -= speed
-
+		$PlayerAnim.flip_h = true
 
 #	NEED MOVE LEFT CODE
 
