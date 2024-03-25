@@ -20,7 +20,7 @@ texture = ExtResource( 3 )
 position = Vector2( 9, 500 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 493.5, 44 )
+position = Vector2( 490, 52 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]

@@ -15,3 +15,16 @@ margin_top = 30.0
 margin_right = -935.0
 margin_bottom = -556.0
 text = "my_score :"
+
+[node name="Label2" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.339
+margin_left = 893.0
+margin_top = 49.0
+margin_right = -86.0
+margin_bottom = -140.4
+text = "Timer : 10"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
