@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/wood.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/props/Titlebackground.png" type="Texture" id=3]
 [ext_resource path="res://scenes/egg.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/UI.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 538.5, 63 )
@@ -25,6 +26,10 @@ shape = SubResource( 1 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 451, 426 )
 
+[node name="UI" parent="." instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+
 [node name="wood" parent="." instance=ExtResource( 1 )]
 position = Vector2( 231, 406 )
 
@@ -37,14 +42,41 @@ position = Vector2( 638, 411 )
 [node name="wood4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 776, 322 )
 
+[node name="wood5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 467, 232 )
+
 [node name="egg" parent="." instance=ExtResource( 4 )]
-position = Vector2( 642, 362 )
+position = Vector2( 588, 378 )
+
+[node name="egg9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 638, 378 )
+
+[node name="egg10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 682, 379 )
 
 [node name="egg2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 239, 351 )
+position = Vector2( 198, 365 )
+
+[node name="egg7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 240, 367 )
+
+[node name="egg8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 288, 368 )
 
 [node name="egg3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 91, 264 )
+position = Vector2( 33, 273 )
+
+[node name="egg5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 74, 273 )
+
+[node name="egg6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 129, 271 )
 
 [node name="egg4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 785, 274 )
+position = Vector2( 468, 195 )
+
+[node name="egg11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 785, 279 )
+
+[node name="egg12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 825, 280 )
