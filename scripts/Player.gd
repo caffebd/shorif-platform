@@ -1,11 +1,17 @@
 extends KinematicBody2D
 
+var FLY_SPEED = 200
+var GRAVITY = 500
+var FLY_ACCELERATION = 1000
 export var speed = 250
 
 export var jump_speed = -450
 var gravity = 900
 
 var direction := Vector2.ZERO
+
+var velocity = Vector2()
+
 
 # Called when the node enters the scene tree for the first time
 
@@ -32,4 +38,13 @@ func _process(delta):
 			direction.y = jump_speed	
 
 	direction = move_and_slide(direction,  Vector2.UP)
+
+func _physics_process(delta):
+	if not Input.is_action_pressed("fly"):
+		velocity.y += GRAVITY * delta
+
+
+
+
+
 
