@@ -25,7 +25,7 @@ position = Vector2( 490, 52 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 451, 426 )
+position = Vector2( 485, 408 )
 
 [node name="UI" parent="." instance=ExtResource( 5 )]
 anchor_right = 0.0
@@ -86,4 +86,4 @@ position = Vector2( 785, 279 )
 position = Vector2( 825, 280 )
 
 [node name="Fly_Key" parent="." instance=ExtResource( 6 )]
-position = Vector2( 465, 173 )
+position = Vector2( 605, 376 )

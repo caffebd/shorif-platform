@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 var FLY_SPEED = 200
-var GRAVITY = 500
 var FLY_ACCELERATION = 1000
 export var speed = 250
 var canFly = false
@@ -9,20 +8,18 @@ var canFly = false
 
 var velocity = Vector2()
 
-func _physics_process(delta):
-	velocity.y += GRAVITY * delta
-
-
-	move_and_slide(velocity)
-
-
 
 export var jump_speed = -450
+
 var gravity = 900
 
 var direction := Vector2.ZERO
 
+func _ready():
+	GlobalSignal.connect("Key", self, "_key")
 
+func _key():
+	gravity = 0
 
 func _input(event):
 	
@@ -38,7 +35,6 @@ func _input(event):
 		$PlayerAnim.flip_h = true
 
 
-
 func _process(delta):
 	
 	direction.y += gravity * delta
@@ -48,9 +44,7 @@ func _process(delta):
 
 	direction = move_and_slide(direction,  Vector2.UP)
 
-func _physics_process(delta):
-	if not Input.is_action_pressed("fly"):
-		velocity.y += gravity * delta
+
 
 
 
