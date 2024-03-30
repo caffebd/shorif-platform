@@ -2,7 +2,9 @@ extends Control
 
 var score = 0
 
-var Timer = 10
+var fly_timer = 5
+
+var gmae_timer = 60
 
 func _ready():
 	$Timer.start()
@@ -13,22 +15,32 @@ func _ready():
 
 
 func _Key():
-	score += 1
-	$Label.text = "newschore: "+str(score)
+	fly_timer = 5
+	$Fly.text = "Fly :"+str(fly_timer)
+	$Fly_TImer.start()
 	
 	
 	
 func _score():
 	score += 1
 	$Label.text = "my_score: "+str(score)
+	
 
 
 
 func _on_Timer_timeout():
-	Timer -= 1
-	$Label2.text = "Timer :"+str(Timer)
+	gmae_timer -= 1
+	$Label2.text = "Timer :"+str(gmae_timer)
 
 
 
 
 
+
+
+func _on_Fly_TImer_timeout():
+	fly_timer -= 1
+	$Fly.text = "Fly :"+str(fly_timer)
+	if fly_timer == 0:
+		$Fly_TImer.stop()
+		GlobalSignal.emit_signal("stop_Fly")
