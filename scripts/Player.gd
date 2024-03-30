@@ -1,7 +1,10 @@
 extends KinematicBody2D
 
 var FLY_SPEED = 200
+<<<<<<< HEAD
 var gravity  = 500
+=======
+>>>>>>> fcc2a7766bd5537e820cf95bdb21d2b551a26246
 var FLY_ACCELERATION = 1000
 export var speed = 250
 var canFly = false
@@ -15,6 +18,7 @@ var gravity = 900
 
 
 
+<<<<<<< HEAD
 func _physics_process(delta):
 	velocity.y += gravity * delta
 
@@ -30,6 +34,20 @@ var direction := Vector2.ZERO
 
 func _key():
 	GlobalSignal.connect("key", self, "key")
+=======
+
+export var jump_speed = -450
+
+var gravity = 900
+
+var direction := Vector2.ZERO
+
+func _ready():
+	GlobalSignal.connect("Key", self, "_key")
+
+func _key():
+	gravity = 0
+>>>>>>> fcc2a7766bd5537e820cf95bdb21d2b551a26246
 
 func _input(event):
 	
@@ -45,7 +63,6 @@ func _input(event):
 		$PlayerAnim.flip_h = true
 
 
-
 func _process(delta):
 	
 	direction.y += gravity * delta
@@ -57,8 +74,14 @@ func _process(delta):
 	direction = move_and_slide(direction,  Vector2.UP)
 
 
+<<<<<<< HEAD
 func _key():
 	gravity = 0
+=======
+
+
+
+>>>>>>> fcc2a7766bd5537e820cf95bdb21d2b551a26246
 
 
 
