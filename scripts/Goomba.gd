@@ -14,4 +14,3 @@ func _process(delta):
 		direction.x = walk_speed
 		
 	direction = move_and_slide(direction, Vector2.UP)
-
