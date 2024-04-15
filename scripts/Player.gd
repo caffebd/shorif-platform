@@ -5,7 +5,7 @@ var FLY_SPEED = 200
 
 
 var FLY_ACCELERATION = 1000
-export var speed = 250
+export var speed = 200
 var canFly = false
 
 
@@ -21,12 +21,18 @@ var flying = false
 #var gravity = 900
 
 var direction := Vector2.ZERO
-
+var pushed = false
 
 func _ready():
 	GlobalSignal.connect("Key", self, "_key")
 	GlobalSignal.connect("stop_Fly", self, "_stop_Fly")
+	GlobalSignal.connect("push_up", self, "_push_up")
+		
+func _push_up():
+	pushed = true
+		
 
+		
 func _key():
 	gravity = 0
 	flying = true
@@ -66,8 +72,6 @@ func _input(event):
 
 
 
-
-
 func _process(delta):
 	
 	direction.y += gravity * delta
@@ -75,6 +79,9 @@ func _process(delta):
 		if is_on_floor() and not flying:
 			direction.y = jump_speed
 
+	if pushed:
+		direction.y = jump_speed/2
+		pushed = false
 
 	direction = move_and_slide(direction,  Vector2.UP)
 

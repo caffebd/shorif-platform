@@ -10,7 +10,7 @@ signal stop_Fly()
 
 signal newschore()
 
-
+signal push_up()
 
 
 

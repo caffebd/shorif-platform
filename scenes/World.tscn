@@ -26,23 +26,23 @@ position = Vector2( 490, 52 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 419, 425 )
+position = Vector2( 369, 420 )
 
 [node name="UI" parent="." instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 
 [node name="wood" parent="." instance=ExtResource( 1 )]
-position = Vector2( 231, 406 )
+position = Vector2( 95, 399 )
 
 [node name="wood2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 84, 312 )
+position = Vector2( 336, 366 )
 
 [node name="wood3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 638, 411 )
+position = Vector2( 598, 367 )
 
 [node name="wood4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 776, 322 )
+position = Vector2( 886, 377 )
 
 [node name="wood5" parent="." instance=ExtResource( 1 )]
 position = Vector2( 467, 232 )
@@ -90,4 +90,16 @@ position = Vector2( 825, 280 )
 position = Vector2( 465, 181 )
 
 [node name="Goomba" parent="." instance=ExtResource( 7 )]
-position = Vector2( 464, 343 )
+position = Vector2( 686, 459 )
+
+[node name="Goomba4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 548, 459 )
+walk_timer = 2
+
+[node name="Goomba2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 838, 458 )
+walk_timer = 4
+
+[node name="Goomba3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 970, 458 )
+walk_timer = 5
