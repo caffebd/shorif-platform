@@ -35,9 +35,6 @@ func _on_Timer_timeout():
 
 
 
-
-
-
 func _on_Fly_TImer_timeout():
 	fly_timer -= 1
 	$Fly.text = "Fly :"+str(fly_timer)
