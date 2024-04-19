@@ -10,10 +10,10 @@ var canFly = false
 
 
 var velocity = Vector2()
-export var jump_speed = -450
+export var jump_speed = -500
 
 
-var gravity = 500
+var gravity = 1000
 
 var flying = false
 
@@ -22,7 +22,7 @@ var flying = false
 
 var direction := Vector2.ZERO
 var pushed = false
-
+	
 func _ready():
 	GlobalSignal.connect("Key", self, "_key")
 	GlobalSignal.connect("stop_Fly", self, "_stop_Fly")
@@ -30,9 +30,9 @@ func _ready():
 		
 func _push_up():
 	pushed = true
-		
 
-		
+
+
 func _key():
 	gravity = 0
 	flying = true
