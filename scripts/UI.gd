@@ -11,6 +11,22 @@ func _ready():
 	GlobalSignal.connect("score", self, "_score")
 	GlobalSignal.connect("Key", self, "_Key")
 	$Label.text = "my_score: "+str(score)
+	GlobalSignal.connect("show_sign", self, "_show_sign")
+	GlobalSignal.connect("hide_sign", self, "_hide_sign")
+
+
+func _show_sign(text):
+	$RichTextLabel.text = text
+	$RichTextLabel.visible = true
+	
+func _hide_sign():
+	$RichTextLabel.visible = false
+
+
+
+
+
+
 
 
 

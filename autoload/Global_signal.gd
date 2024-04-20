@@ -12,10 +12,9 @@ signal newschore()
 
 signal push_up()
 
+signal show_sign(text)
 
-
-
-
+signal hide_sign()
 
 
 
