@@ -12,9 +12,11 @@ signal newschore()
 
 signal push_up()
 
-signal show_sign(text)
 
+signal show_sign(text)
 signal hide_sign()
 
 
+signal ufo_attack()
+signal ufo_return()
 

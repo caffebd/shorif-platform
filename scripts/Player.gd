@@ -59,6 +59,9 @@ func _input(event):
 		direction.x -= speed
 		$PlayerAnim.flip_h = true
 
+	if Input.is_action_just_pressed("ufo"):
+		GlobalSignal.emit_signal("ufo_attack")
+
 	
 	if flying:
 		direction.y = 0 

@@ -43,3 +43,9 @@ func _on_DieArea2D2_body_entered(body):
 
 
 
+
+
+func _on_DieArea2D2_area_entered(area):
+	if area.is_in_group("ufo"):
+		GlobalSignal.emit_signal("ufo_reurn")
+		queue_free()
