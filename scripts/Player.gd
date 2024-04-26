@@ -77,9 +77,10 @@ func _input(event):
 
 func _process(delta):
 	
-	direction.y += gravity * delta
+	direction.y += gravity * delta 
+	var is_grounded = $RayCastFloor.is_colliding()
 	if Input.is_action_just_pressed("jump"):
-		if is_on_floor() and not flying:
+		if is_grounded and not flying:
 			direction.y = jump_speed
 
 	if pushed:

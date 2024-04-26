@@ -51,7 +51,6 @@ func _ufo_return():
 func _process(delta):
 
 	if attacking:
-
 		target_position = (enemy.global_position - global_position).normalized()
 
 		move_and_slide(target_position * attack_speed, Vector2.UP)

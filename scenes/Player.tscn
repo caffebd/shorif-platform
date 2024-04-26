@@ -33,6 +33,10 @@ position = Vector2( 1, -25 )
 current = true
 zoom = Vector2( 0.75, 0.75 )
 
+[node name="RayCastFloor" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 48 )
+
 [node name="UI" parent="." instance=ExtResource( 4 )]
 margin_left = -83.0
 margin_top = -40.0
